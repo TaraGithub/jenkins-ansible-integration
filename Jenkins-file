@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Ansible-Deployment') {
             steps {
-				ansiblePlaybook become: true, credentialsId: 'ansible-sshkey', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'install-httpd.yml'
+				ansiblePlaybook become: true, credentialsId: 'Ansible-sshkey', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'install-httpd.yml'
             }
         }
     }
